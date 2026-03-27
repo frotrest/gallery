@@ -1,18 +1,18 @@
-import './Button.css'
-import { Component } from 'react'
+import './Button.css';
 
-export default class Button extends Component {
+const Button = ({ load, none }) => {
+  return (
+    <>
+      <div
+        className="Button-Box"
+        style={none != '' ? { display: 'flex' } : { display: 'none' }}
+      >
+        <button onClick={load} className="Button">
+          Load more
+        </button>
+      </div>
+    </>
+  );
+};
 
-    render() {
-        const { load, none } = this.props
-        return (
-        <>
-            <div className='Button-Box' style={none != '' ? {display: 'flex'} : {display: 'none'}}>
-                <button onClick={load} className='Button'>Load more</button>
-            </div>
-        </>
-
-        )
-    }
-}
-
+export default Button;

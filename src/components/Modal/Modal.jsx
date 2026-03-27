@@ -1,23 +1,20 @@
 import './Modal.css';
-import { Component } from 'react';
 
-export default class Modal extends Component {
-  handleOverlayClick = (e) => {
+const Modal = ({ modalImg, onClose }) => {
+  const handleOverlayClick = (e) => {
     if (e.target.classList.contains('Overlay')) {
-      this.props.onClose();
+      onClose();
     }
   };
+  return (
+    <div
+      className="Overlay"
+      style={modalImg ? { display: 'flex' } : { display: 'none' }}
+      onClick={handleOverlayClick}
+    >
+      <div className="Modal">{modalImg && <img src={modalImg} alt="" />}</div>
+    </div>
+  );
+};
 
-  render() {
-    const { modalImg } = this.props;
-    return (
-      <div
-        className="Overlay"
-        style={modalImg ? { display: 'flex' } : { display: 'none' }}
-        onClick={this.handleOverlayClick}
-      >
-        <div className="Modal">{modalImg && <img src={modalImg} alt="" />}</div>
-      </div>
-    );
-  }
-}
+export default Modal;

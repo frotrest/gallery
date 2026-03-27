@@ -1,6 +1,6 @@
 import './ImageGalleryItem.css';
 
-const ImageGalleryItem = ({img, modalImg}) => {
+const ImageGalleryItem = React.memo(({img, modalImg}) => {
     return (
             <>
                 <li className="ImageGalleryItem">
@@ -8,7 +8,7 @@ const ImageGalleryItem = ({img, modalImg}) => {
                 </li>
             </>
     );
-}
+})
 
 export default ImageGalleryItem;
 

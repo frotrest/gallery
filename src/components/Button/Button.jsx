@@ -1,6 +1,6 @@
 import './Button.css';
 
-const Button = ({ load, none }) => {
+const Button = React.memo(({ load, none }) => {
   return (
     <>
       <div
@@ -13,6 +13,6 @@ const Button = ({ load, none }) => {
       </div>
     </>
   );
-};
+});
 
 export default Button;

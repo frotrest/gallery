@@ -1,4 +1,5 @@
 import './Button.css';
+import React from 'react';
 
 const Button = React.memo(({ load, none }) => {
   return (

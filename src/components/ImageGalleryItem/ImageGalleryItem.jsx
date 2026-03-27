@@ -1,4 +1,5 @@
 import './ImageGalleryItem.css';
+import React from 'react';
 
 const ImageGalleryItem = React.memo(({img, modalImg}) => {
     return (

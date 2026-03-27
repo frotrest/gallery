@@ -1,17 +1,14 @@
-import './ImageGalleryItem.css'
-import { Component } from 'react'
+import './ImageGalleryItem.css';
 
-export default class ImageGalleryItem extends Component {
-    render() {
-        const {img, modalImg} = this.props
-
-        return (
+const ImageGalleryItem = ({img, modalImg}) => {
+    return (
             <>
                 <li className="ImageGalleryItem">
                     <img className='ImageGalleryItem-image' onClick={() => modalImg(img)} src={img} alt="" />
                 </li>
             </>
-        )
-    }
+    );
 }
+
+export default ImageGalleryItem;
 
